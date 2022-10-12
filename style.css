@@ -328,6 +328,11 @@ footer p a:hover {
 }
 
 @media screen and (max-width: 576px) {
+
+    * {
+        scroll-margin-top: 150px;
+    }
+
     nav ul {
         position: absolute;
         overflow: hidden;
