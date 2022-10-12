@@ -148,19 +148,19 @@ header article {
     height: 75vh;
 }
 
-article img {
-    width: 60%;
+header article img {
+    width: 35%;
     border-radius: 50%;
     border: 6px solid var(--color-quaternary);
 }
 
-article h1 {
+header article h1 {
     font-size: 2.5rem;
     margin-top: 1.5rem;
 }
 
-article p {
-    padding: 0rem 1rem;
+header article p {
+    padding: 0rem 2rem;
     font-size: 1.1rem;
     margin-top: .5rem;
 }
@@ -171,56 +171,54 @@ main {
     color: var(--color-primary);
 }
 
-main>article[id="tentang"] {
-    text-align: center;
-    font-size: 1.5em;
-    padding-top: 5rem;
-}
 
-main>article[id="tentang"]>p {
+article[id="tentang"] p {
     text-align: justify;
-    font-size: 1.1rem;
-    padding: 0rem 2.2rem;
-    padding-top: 5vh;
+    padding: 5vh 0;
 }
 
-article[id="tentang"]>figure {
-    padding-top: 5vh;
+article[id="tentang"] h2 {
+    text-align: center;
+    font-size: 2em;
 }
+
+article[id="pengalaman"] {
+    text-align: center;
+    background: var(--color-quaternary);
+    width: 100%;
+    padding: 5vh 0;
+}
+
+article[id="pengalaman"] h2 {
+    font-size: 1.7em;
+    padding: 5vh 0;
+}
+
 
 figure>figcaption {
-    padding-bottom: 2.5rem;
-    font-weight: 900;
-    font-size: 1.1em;
+    font-size: 1.5em;
+    font-weight: 600;
+    padding: 5vh 0;
 }
 
 figure>iframe {
     border-radius: 7.5px;
 }
 
-main>article[id="pengalaman"] {
-    text-align: center;
-    padding: 0 2.2rem 5rem 2.2rem;
-    background: var(--color-quaternary);
-}
-
-article[id="pengalaman"]>h2 {
-    padding-top: 5vh;
-    padding-bottom: 2.5rem;
-    font-size: 1.7em;
-}
-
-
 
 article[id="pengalaman"]>.box {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 1rem 0rem;
     border-radius: 5px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
     background: var(--color-quaternary);
+    padding: 2em 0;
+}
+
+.box {
+    font-size: .8em;
 }
 
 #pengalaman .box:nth-child(2) {
@@ -232,7 +230,7 @@ article[id="pengalaman"]>.box {
 }
 
 .box>.pengalaman {
-    flex: 5;
+    flex: 3;
 }
 
 .box>.tahun {
@@ -258,11 +256,12 @@ form {
     justify-content: center;
     align-items: center;
     font-size: 1.2em;
+    padding: 0 20vw;
 }
 
 form input,
 textarea {
-    width: 80%;
+    width: 100%;
     height: 2.5rem;
     margin-bottom: 2rem;
     border-radius: 5px;
@@ -272,7 +271,7 @@ textarea {
 
 form label {
     text-align: left;
-    width: 80%;
+    width: 100%;
     padding-bottom: 1rem;
 }
 
@@ -311,7 +310,17 @@ footer p a:hover {
     color: var(--color-quinary);
 }
 
-@media screen and (max-width: 768px) {
+.row {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 7.5vh 2rem;
+}
+
+@media screen and (max-width: 855px) {
     nav ul {
         width: 70%;
     }
@@ -346,5 +355,58 @@ footer p a:hover {
 
     nav .humberger {
         display: flex;
+    }
+
+    .row {
+        flex-direction: column;
+        /* padding: 3vh; */
+    }
+
+    form {
+        padding: 0 5vw;
+    }
+
+    footer p {
+        font-size: .8em;
+    }
+
+}
+
+@media screen and (min-width: 855px) {
+
+    .container header {
+        text-align: start;
+    }
+
+    header article {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: 10vh;
+        height: 90vh;
+        /* padding: 0 15vw; */
+    }
+
+    article h1 {
+        padding: 0 2rem;
+    }
+
+    article p {
+        padding: 0 2rem;
+    }
+
+    article img {
+        width: 30%;
+    }
+
+    article[id="pengalaman"] {
+        padding: 5vh;
+    }
+
+    .box {
+        width: 100%;
+        margin: auto;
     }
 }
