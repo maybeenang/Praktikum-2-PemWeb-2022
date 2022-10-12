@@ -257,6 +257,7 @@ form {
     align-items: center;
     font-size: 1.2em;
     padding: 0 20vw;
+    padding-bottom: 5vh;
 }
 
 form input,
@@ -297,7 +298,7 @@ footer {
     background-color: var(--color-secondary);
     color: var(--color-quinary);
     text-align: center;
-    height: 15vh;
+    height: 10vh;
     padding: 1rem 5vw 0 5vw;
     font-size: 1rem;
 }
