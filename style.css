@@ -202,6 +202,7 @@ textarea {
 form label {
     text-align: left;
     width: 80%;
+    padding-bottom: 1rem;
 }
 
 textarea {
@@ -219,13 +220,11 @@ footer {
     background-color: var(--color-secondary);
     color: var(--color-quinary);
     text-align: center;
+    font-size: ;
     height: 4vh;
-    padding-top: 10px;
+    padding: .5rem;
+    font-size: 1rem;
     /* padding: 1rem 0rem; */
-}
-
-footer p {
-    font-size: 1.1em;
 }
 
 footer p a {
