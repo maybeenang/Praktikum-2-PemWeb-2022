@@ -8,130 +8,73 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <img src="img/profile.jpeg" alt="profile picture" width="100" />
-      <h1>Hai saya Elang</h1>
-      <p>Saya adalah seorang mahasiswa Insitut Teknologi Sumatera</p>
-      <nav>
-        <ul>
-          <li><a href="#tentang">Tentang saya</a></li>
-          <li><a href="#pengalaman">Pengalaman</a></li>
-          <li><a href="#hubungi">Hubungi saya</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div class="container">
+      <header>
+        <nav>
+          <ul>
+            <li><a href="#tentang">Tentang saya</a></li>
+            <li><a href="#pengalaman">Pengalaman</a></li>
+            <li><a href="#hubungi">Hubungi saya</a></li>
+          </ul>
+        </nav>
+        <article>
+          <img src="img/profile.jpeg" alt="profile picture" />
+          <h1>Hai saya Elang</h1>
+          <p>Saya adalah seorang mahasiswa Insitut Teknologi Sumatera</p>
+        </article>
+      </header>
 
-    <main>
-      <article id="tentang">
-        <h2>Tentang saya</h2>
-        <p>
-          Nama saya Muhammad Elang Permadani, sekarang saya sedang belajar HTML.
-          Saya sangat suka dengan teknologi dan saya ingin menjadi seorang
-          programmer.
-        </p>
+      <main>
+        <article id="tentang">
+          <h2>Tentang saya</h2>
+          <p>
+            Nama saya Muhammad Elang Permadani, sekarang saya sedang belajar
+            HTML. Saya sangat suka dengan teknologi dan saya ingin menjadi
+            seorang programmer.
+          </p>
 
-        <figure>
-          <iframe
-            width="320"
-            height="200"
-            src="https://www.youtube.com/embed/FSOSgkzh_t0"
-            title="YouTube video player"
-            allowfullscreen
-          ></iframe>
-          <figcaption>Video saya</figcaption>
-        </figure>
-      </article>
+          <figure>
+            <figcaption>Video saya</figcaption>
+            <iframe
+              width="320"
+              height="200"
+              src="https://www.youtube.com/embed/FSOSgkzh_t0"
+              title="YouTube video player"
+              allowfullscreen
+            ></iframe>
+          </figure>
+        </article>
 
-      <article id="pengalaman">
-        <h2>Pengalaman</h2>
+        <article id="pengalaman">
+          <h2>Pengalaman</h2>
+          <div class="box">
+            <p class="no">1</p>
+            <p class="pengalaman">Juara 2 LKS Cloud Computing Jatim</p>
+            <p class="tahun">2019</p>
+          </div>
+          <div class="box">
+            <p class="no">2</p>
+            <p class="pengalaman">Back-End Website SMKN2 Lamongan</p>
+            <p class="tahun">2019</p>
+          </div>
+        </article>
 
-        <table>
-          <thead>
-            <tr>
-              <th rowspan="2">No</th>
-              <th rowspan="2">Deskripsi</th>
-              <th colspan="2">Tahun</th>
-            </tr>
-            <tr>
-              <th>Mulai</th>
-              <th>Selesai</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Juara 2 LKS Cloud Computing Jatim</td>
-              <td>2018</td>
-              <td>2019</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Back-End Website SMKN2 Lamongan</td>
-              <td>2019</td>
-              <td>2019</td>
-            </tr>
-          </tbody>
-        </table>
-      </article>
-
-      <article id="hubungi">
-        <h2>Hubungi saya</h2>
-        <form action="get">
-          <label for="nama">Nama : </label>
-          <input type="text" name="nama" id="nama" /><br /><br />
-
-          <p>Jenis Kelamin</p>
-          <br />
-          <input
-            type="radio"
-            name="jenis_kelamin"
-            value="laki-laki"
-            id="laki"
-          />
-          <label for="laki">Laki-Laki</label><br />
-          <input
-            type="radio"
-            name="jenis_kelamin"
-            value="perempuan"
-            id="perempuan"
-          />
-          <label for="perempuan">Perempuan</label><br /><br />
-
-          <label>Pilih media sosial jika ingin berinteraksi dengan saya</label>
-          <br />
-          <input
-            type="checkbox"
-            name="media_sosial"
-            value="facebook"
-            id="facebook"
-          />
-          <label for="facebook">Facebook</label><br />
-          <input
-            type="checkbox"
-            name="media_sosial"
-            value="twitter"
-            id="twitter"
-          />
-          <label for="twitter">Twitter</label><br />
-          <input
-            type="checkbox"
-            name="media_sosial"
-            value="instagram"
-            id="instagram"
-          />
-          <label for="instagram">Instagram</label><br /><br />
-
-          <label for="pesan">Pesan : </label>
-          <br />
-          <textarea name="pesan" id="pesan" cols="30" rows="10"></textarea>
-
-          <br />
-          <input type="submit" value="Kirim" />
-        </form>
-      </article>
-    </main>
-    <footer>
-      <p>&copy; 2022 <a href="https://github.com/maybeenang/"> Elang </a></p>
-    </footer>
+        <article id="hubungi">
+          <h2>Hubungi saya</h2>
+          <form action="">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" />
+            <label for="pesan">Pesan</label>
+            <textarea name="pesan" id="pesan" cols="30" rows="10"></textarea>
+            <input type="submit" value="Kirim" />
+          </form>
+        </article>
+      </main>
+      <footer>
+        <p>&copy; 2022 <a href="https://github.com/maybeenang/"> Elang </a></p>
+      </footer>
+    </div>
   </body>
 </html>

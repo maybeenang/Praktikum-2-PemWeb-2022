@@ -1,10 +1,233 @@
+@font-face {
+    font-family: 'Archivo';
+    src: url(./font/Archivo.ttf);
+}
+
+:root {
+    --color-primary: #06283D;
+    --color-secondary: #256D85;
+    --color-tertiary: #47B5FF;
+    --color-quaternary: #DFF6FF;
+    --color-quinary: #F2F2F2;
+}
+
 * {
-  scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
 }
-table {
-  border: 1px solid black;
+
+body {
+    font-family: 'Archivo', sans-serif;
+    /* overflow: hidden; */
 }
-td,
-th {
-  border: 1px solid black;
+
+.container {
+    width: 100%;
+    background-color: var(--color-primary);
+    color: var(--color-quinary);
+    display: flex;
+    flex-direction: column;
+}
+
+.container header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header nav {
+    width: 100%;
+    background-color: var(--color-secondary);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
+    position: fixed;
+    top: 0;
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    height: 50px;
+}
+
+li a {
+    text-decoration: none;
+    color: var(--color-quinary);
+}
+
+header article {
+    margin-top: 25vh;
+    height: 75vh;
+}
+
+article img {
+    width: 60%;
+    border-radius: 50%;
+    border: 6px solid var(--color-quaternary);
+}
+
+article h1 {
+    font-size: 2.5rem;
+    margin-top: 1.5rem;
+}
+
+article p {
+    padding: 0rem 1rem;
+    font-size: 1.1rem;
+    margin-top: .5rem;
+}
+
+
+main {
+    background-color: var(--color-quaternary);
+    color: var(--color-primary);
+}
+
+main>article[id="tentang"] {
+    height: 80vh;
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 5rem;
+    /* border-bottom: #06283D 1px solid; */
+}
+
+main>article[id="tentang"]>p {
+    text-align: justify;
+    font-size: 1.1rem;
+    padding: 0rem 2.2rem;
+    padding-top: 5vh;
+}
+
+article[id="tentang"]>figure {
+    padding-top: 5vh;
+}
+
+figure>figcaption {
+    padding-bottom: 2.5rem;
+    font-weight: 900;
+    font-size: 1.1em;
+}
+
+figure>iframe {
+    border-radius: 7.5px;
+}
+
+main>article[id="pengalaman"] {
+    text-align: center;
+    padding: 0 2.2rem;
+    height: 50vh;
+    /* border-bottom: 1px solid var(--color-primary); */
+    /* border-top: 1px solid var(--color-primary); */
+    background: var(--color-quaternary);
+    /* background: linear-gradient(180deg, rgba(223, 246, 255, 1) 50%, rgba(6, 40, 61, 1) 100%); */
+}
+
+article[id="pengalaman"]>h2 {
+    padding-top: 5vh;
+    padding-bottom: 2.5rem;
+    font-size: 1.7em;
+}
+
+
+
+article[id="pengalaman"]>.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0rem;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    background: var(--color-quaternary);
+}
+
+#pengalaman .box:nth-child(2) {
+    margin-bottom: 3vh;
+}
+
+.box>.no {
+    flex: 1;
+}
+
+.box>.pengalaman {
+    flex: 5;
+}
+
+.box>.tahun {
+    flex: 1;
+}
+
+main article[id="hubungi"] {
+    text-align: center;
+    padding: 0 2.2rem;
+    height: 100vh;
+    background-color: var(--color-primary);
+    color: var(--color-quinary);
+}
+
+article[id="hubungi"]>h2 {
+    padding-top: 5vh;
+    padding-bottom: 2.5rem;
+    font-size: 1.7em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 5vh; */
+    font-size: 1.2em;
+}
+
+form input,
+textarea {
+    width: 80%;
+    height: 2.5rem;
+    /* margin: 1rem 0rem 3rem 0rem; */
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    border: 1px solid var(--color-quaternary);
+    padding: 0rem 1rem;
+}
+
+form label {
+    text-align: left;
+    width: 80%;
+}
+
+textarea {
+    height: 10rem;
+}
+
+input[type="submit"] {
+    background-color: var(--color-tertiary);
+    color: var(--color-quinary);
+    border: none;
+    font-size: 1em;
+}
+
+footer {
+    background-color: var(--color-secondary);
+    color: var(--color-quinary);
+    text-align: center;
+    height: 4vh;
+    padding-top: 10px;
+    /* padding: 1rem 0rem; */
+}
+
+footer p {
+    font-size: 1.1em;
+}
+
+footer p a {
+    color: var(--color-quaternary);
 }
