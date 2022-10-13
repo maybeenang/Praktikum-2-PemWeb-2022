@@ -152,6 +152,12 @@ header article img {
     width: 35%;
     border-radius: 50%;
     border: 6px solid var(--color-quaternary);
+    transition: all 0.2s ease;
+}
+
+header article img:hover {
+    border: 6px solid var(--color-tertiary);
+    filter: hue-rotate(90deg);
 }
 
 header article h1 {
@@ -219,6 +225,11 @@ article[id="pengalaman"]>.box {
 
 .box {
     font-size: .8em;
+    transition: all 0.5s ease;
+}
+
+.box:hover {
+    transform: scale(1.05);
 }
 
 #pengalaman .box:nth-child(2) {
@@ -236,6 +247,7 @@ article[id="pengalaman"]>.box {
 .box>.tahun {
     flex: 1;
 }
+
 
 main article[id="hubungi"] {
     text-align: center;
